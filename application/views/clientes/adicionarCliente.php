@@ -17,10 +17,10 @@
 } ?>
                 <form action="<?php echo current_url(); ?>" id="formCliente" method="post" class="form-horizontal">
                   <div class="control-group">
-                      <label for="documento" class="control-label">CPF/CNPJ<span class="required">*</span></label>
+                      <label for="documento" class="control-label">Viatura<span class="required">*</span></label>
                       <div class="controls">
-                          <input id="documento" class="cpfcnpj" type="text" name="documento" value="<?php echo set_value('documento'); ?>"  />
-                          <button id="buscar_info_cnpj" class="btn btn-xs" type="button">Buscar Informações (CNPJ)</button>
+                          <input id="documento" type="text" name="documento" value="<?php echo set_value('documento'); ?>"  />
+                         <!--  <button id="buscar_info_cnpj" class="btn btn-xs" type="button">Buscar Informações (CNPJ)</button> -->
                       </div>
                   </div>
                   <div class="control-group">
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="telefone" class="control-label">Telefone<span class="required">*</span></label>
+                        <label for="telefone" class="control-label">Telefone<span></span></label>
                         <div class="controls">
                             <input id="telefone" type="text" name="telefone" value="<?php echo set_value('telefone'); ?>" />
                         </div>
@@ -50,25 +50,25 @@
                     </div>
 
                     <div class="control-group">
-                        <label for="email" class="control-label">Email<span class="required">*</span></label>
+                        <label for="email" class="control-label">Email<span></span></label>
                         <div class="controls">
                             <input id="email" type="text" name="email" value="<?php echo set_value('email'); ?>" />
                         </div>
                     </div>
                     <div class="control-group" class="control-label">
-                        <label for="cep" class="control-label">CEP<span class="required">*</span></label>
+                        <label for="cep" class="control-label">CEP<span></span></label>
                         <div class="controls">
                             <input id="cep" type="text" name="cep" value="<?php echo set_value('cep'); ?>" />
                         </div>
                     </div>
                     <div class="control-group" class="control-label">
-                        <label for="rua" class="control-label">Rua<span class="required">*</span></label>
+                        <label for="rua" class="control-label">Rua<span></span></label>
                         <div class="controls">
                             <input id="rua" type="text" name="rua" value="<?php echo set_value('rua'); ?>" />
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="numero" class="control-label">Número<span class="required">*</span></label>
+                        <label for="numero" class="control-label">Número<span></span></label>
                         <div class="controls">
                             <input id="numero" type="text" name="numero" value="<?php echo set_value('numero'); ?>" />
                         </div>
@@ -81,21 +81,21 @@
                     </div>
 
                     <div class="control-group" class="control-label">
-                        <label for="bairro" class="control-label">Bairro<span class="required">*</span></label>
+                        <label for="bairro" class="control-label">Bairro<span></span></label>
                         <div class="controls">
                             <input id="bairro" type="text" name="bairro" value="<?php echo set_value('bairro'); ?>" />
                         </div>
                     </div>
 
                     <div class="control-group" class="control-label">
-                        <label for="cidade" class="control-label">Cidade<span class="required">*</span></label>
+                        <label for="cidade" class="control-label">Cidade<span></span></label>
                         <div class="controls">
                             <input id="cidade" type="text" name="cidade" value="<?php echo set_value('cidade'); ?>" />
                         </div>
                     </div>
 
                     <div class="control-group" class="control-label">
-                        <label for="estado" class="control-label">Estado<span class="required">*</span></label>
+                        <label for="estado" class="control-label">Estado<span></span></label>
                         <div class="controls">
                             <input id="estado" type="text" name="estado" value="<?php echo set_value('estado'); ?>" />
                         </div>
@@ -130,28 +130,28 @@
                     required: true
                 },
                 telefone: {
-                    required: true
+                    required: false
                 },
                 email: {
-                    required: true
+                    required: false
                 },
                 rua: {
-                    required: true
+                    required: false
                 },
                 numero: {
-                    required: true
+                    required: false
                 },
                 bairro: {
-                    required: true
+                    required: false
                 },
                 cidade: {
-                    required: true
+                    required: false
                 },
                 estado: {
-                    required: true
+                    required: false
                 },
                 cep: {
-                    required: true
+                    required: false
                 }
             },
             messages: {
