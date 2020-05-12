@@ -1,7 +1,7 @@
 <div class="widget-box">
     <div class="widget-title">
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#tab1">Dados do Cliente</a></li>
+            <li class="active"><a data-toggle="tab" href="#tab1">Dados da Viatura</a></li>
             <li><a data-toggle="tab" href="#tab2">Ordens de Serviço</a></li>
             <div class="buttons">
                 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eCliente')) {
@@ -20,7 +20,7 @@
                         <div class="widget-title">
                             <a data-parent="#collapse-group" href="#collapseGOne" data-toggle="collapse">
                                 <span class="icon"><i class="fas fa-user"></i></span>
-                                <h5>Dados Pessoais</h5>
+                                <h5>Dados Viatura</h5>
                             </a>
                         </div>
                     </div>
@@ -51,16 +51,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-group widget-box">
+<!--                 <div class="accordion-group widget-box">
                     <div class="accordion-heading">
                         <div class="widget-title">
                             <a data-parent="#collapse-group" href="#collapseGTwo" data-toggle="collapse">
                                 <span class="icon"><i class="fas fa-phone-alt"></i></span>
                                 <h5>Contatos</h5>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="collapse accordion-body" id="collapseGTwo">
+<!--                     <div class="collapse accordion-body" id="collapseGTwo">
                         <div class="widget-content">
                             <table class="table table-bordered">
                                 <tbody>
@@ -92,8 +92,8 @@
                             </table>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-group widget-box">
+                </div> -->
+                <!-- <div class="accordion-group widget-box">
                     <div class="accordion-heading">
                         <div class="widget-title">
                             <a data-parent="#collapse-group" href="#collapseGThree" data-toggle="collapse">
@@ -147,7 +147,7 @@
                             </table>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
 

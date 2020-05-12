@@ -1,5 +1,5 @@
 <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'aCliente')) { ?>
-    <a href="<?php echo base_url(); ?>index.php/clientes/adicionar" class="btn btn-success"><i class="fas fa-plus"></i> Adicionar Cliente</a>
+    <a href="<?php echo base_url(); ?>index.php/clientes/adicionar" class="btn btn-success"><i class="fas fa-plus"></i> Adicionar Viatura</a>
 <?php } ?>
 
 <div class="widget-box">
@@ -7,7 +7,7 @@
         <span class="icon">
             <i class="fas fa-user"></i>
         </span>
-        <h5>Clientes</h5>
+        <h5>Viaturas</h5>
     </div>
 
     <div class="widget-content nopadding">
@@ -15,10 +15,10 @@
             <thead>
                 <tr>
                     <th>Cod.</th>
-                    <th>Nome</th>
-                    <th>CPF/CNPJ</th>
-                    <th>Telefone</th>
-                    <th>Email</th>
+                    <th>Viatura</th>
+                    <th>Placa</th>
+                    <th>Setor</th>
+<!--                     <th>Email</th> -->
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -27,25 +27,25 @@
                     
                     if (!$results) {
                         echo '<tr>
-                                <td colspan="5">Nenhum Cliente Cadastrado</td>
+                                <td colspan="5">Nenhum Viatura Cadastrado</td>
                                 </tr>';
                     }
                     foreach ($results as $r) {
                         echo '<tr>';
                         echo '<td>' . $r->idClientes . '</td>';
-                        echo '<td>' . $r->nomeCliente . '</td>';
                         echo '<td>' . $r->documento . '</td>';
-                        echo '<td>' . $r->telefone . '</td>';
+                        echo '<td>' . $r->nomeCliente . '</td>';
+                        echo '<td>' . $r->rua . '</td>';
                         echo '<td>' . $r->email . '</td>';
                         echo '<td>';
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) {
                             echo '<a href="' . base_url() . 'index.php/clientes/visualizar/' . $r->idClientes . '" style="margin-right: 1%" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
                         }
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eCliente')) {
-                            echo '<a href="' . base_url() . 'index.php/clientes/editar/' . $r->idClientes . '" style="margin-right: 1%" class="btn btn-info tip-top" title="Editar Cliente"><i class="fas fa-edit"></i></a>';
+                            echo '<a href="' . base_url() . 'index.php/clientes/editar/' . $r->idClientes . '" style="margin-right: 1%" class="btn btn-info tip-top" title="Editar Viatura"><i class="fas fa-edit"></i></a>';
                         }
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'dCliente')) {
-                            echo '<a href="#modal-excluir" role="button" data-toggle="modal" cliente="' . $r->idClientes . '" style="margin-right: 1%" class="btn btn-danger tip-top" title="Excluir Cliente"><i class="fas fa-trash-alt"></i></a>';
+                            echo '<a href="#modal-excluir" role="button" data-toggle="modal" cliente="' . $r->idClientes . '" style="margin-right: 1%" class="btn btn-danger tip-top" title="Excluir Viatura"><i class="fas fa-trash-alt"></i></a>';
                         }
                         echo '</td>';
                         echo '</tr>';
@@ -67,7 +67,7 @@
         </div>
         <div class="modal-body">
             <input type="hidden" id="idCliente" name="id" value="" />
-            <h5 style="text-align: center">Deseja realmente excluir este cliente e os dados associados a ele (OS, Vendas, Receitas)?</h5>
+            <h5 style="text-align: center">Deseja realmente excluir esta viatura e os dados associados a ele (OS,)?</h5>
         </div>
         <div class="modal-footer">
             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>

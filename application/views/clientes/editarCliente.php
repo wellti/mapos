@@ -9,7 +9,7 @@
                 <span class="icon">
                     <i class="fas fa-user"></i>
                 </span>
-                <h5>Editar Cliente</h5>
+                <h5>Editar Viatura</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php if ($custom_error != '') {
@@ -18,26 +18,26 @@
                 <form action="<?php echo current_url(); ?>" id="formCliente" method="post" class="form-horizontal">
 
                   <div class="control-group">
-                      <label for="documento" class="control-label">CPF/CNPJ<span class="required">*</span></label>
+                      <label for="documento" class="control-label">Viatura<span class="required">*</span></label>
                       <div class="controls">
-                          <input id="documento" class="cpfcnpj" type="text" name="documento" value="<?php echo $result->documento; ?>" />
-                          <button id="buscar_info_cnpj" class="btn btn-xs" type="button">Buscar Informações (CNPJ)</button>
+                          <input id="documento" type="text" name="documento" value="<?php echo $result->documento; ?>" />
+                          <!-- <button id="buscar_info_cnpj" class="btn btn-xs" type="button">Buscar Informações (CNPJ)</button> -->
                       </div>
                   </div>
                     <div class="control-group">
                         <?php echo form_hidden('idClientes', $result->idClientes) ?>
-                        <label for="nomeCliente" class="control-label">Nome<span class="required">*</span></label>
+                        <label for="nomeCliente" class="control-label">Placa<span class="required">*</span></label>
                         <div class="controls">
                             <input id="nomeCliente" type="text" name="nomeCliente" value="<?php echo $result->nomeCliente; ?>" />
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="contato" class="control-label">Contato:<span class="required">*</span></label>
+                        <label for="contato" class="control-label">Renavan:<span class="required">*</span></label>
                         <div class="controls">
                             <input class="nomeCliente" type="text" name="contato" value="<?php echo $result->contato; ?>" />
                         </div>
                     </div>
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="telefone" class="control-label">Telefone<span class="required">*</span></label>
                         <div class="controls">
                             <input id="telefone" type="text" name="telefone" value="<?php echo $result->telefone; ?>" />
@@ -60,13 +60,13 @@
                         <div class="controls">
                             <input id="cep" type="text" name="cep" value="<?php echo $result->cep; ?>" />
                         </div>
-                    </div>
+                    </div> -->
                     <div class="control-group" class="control-label">
-                        <label for="rua" class="control-label">Rua<span class="required">*</span></label>
+                        <label for="rua" class="control-label">Setor<span class="required">*</span></label>
                         <div class="controls">
                             <input id="rua" type="text" name="rua" value="<?php echo $result->rua; ?>" />
                         </div>
-                    </div>
+<!--                     </div>
                     <div class="control-group">
                         <label for="numero" class="control-label">Número<span class="required">*</span></label>
                         <div class="controls">
@@ -98,7 +98,7 @@
                         <div class="controls">
                             <input id="estado" type="text" name="estado" value="<?php echo $result->estado; ?>" />
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="form-actions">
                         <div class="span12">
@@ -128,28 +128,28 @@
                     required: true
                 },
                 telefone: {
-                    required: true
+                    required: false
                 },
                 email: {
-                    required: true
+                    required: false
                 },
                 rua: {
-                    required: true
+                    required: false
                 },
                 numero: {
-                    required: true
+                    required: false
                 },
                 bairro: {
-                    required: true
+                    required: false
                 },
                 cidade: {
-                    required: true
+                    required: false
                 },
                 estado: {
-                    required: true
+                    required: false
                 },
                 cep: {
-                    required: true
+                    required: false
                 }
             },
             messages: {

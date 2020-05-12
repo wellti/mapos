@@ -9,7 +9,7 @@
                 <span class="icon">
                     <i class="fas fa-user"></i>
                 </span>
-                <h5>Cadastro de Cliente</h5>
+                <h5>Cadastro de Viaturas</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php if ($custom_error != '') {
@@ -24,18 +24,18 @@
                       </div>
                   </div>
                   <div class="control-group">
-                        <label for="nomeCliente" class="control-label">Nome<span class="required">*</span></label>
+                        <label for="nomeCliente" class="control-label">Placa<span class="required">*</span></label>
                         <div class="controls">
                             <input id="nomeCliente" type="text" name="nomeCliente" value="<?php echo set_value('nomeCliente'); ?>" />
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="contato" class="control-label">Contato:</label>
+                        <label for="contato" class="control-label">Renavan:</label>
                         <div class="controls">
                             <input class="nomeCliente" type="text" name="contato" value="<?php echo set_value('contato'); ?>" />
                         </div>
                     </div>
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="telefone" class="control-label">Telefone<span></span></label>
                         <div class="controls">
                             <input id="telefone" type="text" name="telefone" value="<?php echo set_value('telefone'); ?>" />
@@ -47,27 +47,27 @@
                         <div class="controls">
                             <input id="celular" type="text" name="celular" value="<?php echo set_value('celular'); ?>" />
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="email" class="control-label">Email<span></span></label>
                         <div class="controls">
                             <input id="email" type="text" name="email" value="<?php echo set_value('email'); ?>" />
                         </div>
-                    </div>
-                    <div class="control-group" class="control-label">
+                    </div> -->
+<!--                     <div class="control-group" class="control-label">
                         <label for="cep" class="control-label">CEP<span></span></label>
                         <div class="controls">
                             <input id="cep" type="text" name="cep" value="<?php echo set_value('cep'); ?>" />
                         </div>
-                    </div>
+                    </div> -->
                     <div class="control-group" class="control-label">
-                        <label for="rua" class="control-label">Rua<span></span></label>
+                        <label for="rua" class="control-label">Setor<span></span></label>
                         <div class="controls">
                             <input id="rua" type="text" name="rua" value="<?php echo set_value('rua'); ?>" />
                         </div>
                     </div>
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="numero" class="control-label">Número<span></span></label>
                         <div class="controls">
                             <input id="numero" type="text" name="numero" value="<?php echo set_value('numero'); ?>" />
@@ -99,7 +99,7 @@
                         <div class="controls">
                             <input id="estado" type="text" name="estado" value="<?php echo set_value('estado'); ?>" />
                         </div>
-                    </div>
+                    </div> -->
 
 
 
