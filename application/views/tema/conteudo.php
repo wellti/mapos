@@ -1,6 +1,6 @@
 <div id="content">
     <div id="content-header">
-      <div id="breadcrumb"> <a href="<?= base_url() ?>" title="Dashboard" class="tip-bottom"><i class="fas fa-home"></i> Dashboard</a>
+      <div id="breadcrumb"> <a href="<?= base_url() ?>" title="Painel de Controle" class="tip-bottom"><i class="fas fa-home"></i> Painel de Controle</a>
         <?php if ($this->uri->segment(1) != null) { ?>
             <a href="<?= base_url() . 'index.php/' . $this->uri->segment(1) ?>" class="tip-bottom" title="<?= ucfirst($this->uri->segment(1)); ?>">
               <?= ucfirst($this->uri->segment(1)); ?>

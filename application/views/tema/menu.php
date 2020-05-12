@@ -3,17 +3,17 @@
   <ul>
     <li class="<?php if (isset($menuPainel)) {
     echo 'active';
-}; ?>"><a href="<?= base_url() ?>"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+}; ?>"><a href="<?= base_url() ?>"><i class="fas fa-home"></i> <span>Painel de Controle</span></a></li>
     <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) { ?>
       <li class="<?php if (isset($menuClientes)) {
     echo 'active';
-}; ?>"><a href="<?= site_url('clientes') ?>"><i class="fas fa-users"></i> <span>Clientes</span></a></li>
+}; ?>"><a href="<?= site_url('clientes') ?>"><i class="fas fa-users"></i> <span>Viaturas</span></a></li>
     <?php
     } ?>
     <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vProduto')) { ?>
       <li class="<?php if (isset($menuProdutos)) {
         echo 'active';
-    }; ?>"><a href="<?= site_url('produtos') ?>"><i class="fas fa-shopping-bag"></i> <span>Produtos</span></a></li>
+    }; ?>"><a href="<?= site_url('produtos') ?>"><i class="fas fa-shopping-bag"></i> <span>Peças e Acessórios</span></a></li>
     <?php
     } ?>
     <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vServico')) { ?>
@@ -28,12 +28,12 @@
     }; ?>"><a href="<?= site_url('os') ?>"><i class="fas fa-diagnoses"></i> <span>Ordens de Serviço</span></a></li>
     <?php
     } ?>
-    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vVenda')) { ?>
+<!--     <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vVenda')) { ?>
       <li class="<?php if (isset($menuVendas)) {
         echo 'active';
     }; ?>"><a href="<?= site_url('vendas') ?>"><i class="fas fa-cash-register"></i> <span>Vendas</span></a></li>
     <?php
-    } ?>
+    } ?> -->
     <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vGarantia')) { ?>
       <li class="<?php if (isset($menuGarantia)) {
         echo 'active';
@@ -64,11 +64,11 @@
         <a href="#"><i class="fas fa-list-alt"></i> <span>Relatórios</span> <span class="label"><i class="fas fa-chevron-down"></i></span></a>
         <ul>
           <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rCliente')) { ?>
-            <li><a href="<?= site_url('relatorios/clientes') ?>">Clientes</a></li>
+            <li><a href="<?= site_url('relatorios/clientes') ?>">Viaturas</a></li>
           <?php
           } ?>
           <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rProduto')) { ?>
-            <li><a href="<?= site_url('relatorios/produtos') ?>">Produtos</a></li>
+            <li><a href="<?= site_url('relatorios/produtos') ?>">Peças e Acessórios</a></li>
           <?php
           } ?>
           <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rServico')) { ?>
@@ -79,10 +79,10 @@
             <li><a href="<?= site_url('relatorios/os') ?>">Ordens de Serviço</a></li>
           <?php
           } ?>
-          <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rVenda')) { ?>
+<!--           <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rVenda')) { ?>
             <li><a href="<?= site_url('relatorios/vendas') ?>">Vendas</a></li>
           <?php
-          } ?>
+          } ?> -->
           <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'rGarantia')) { ?>
             <li><a href="<?= site_url('relatorios/Garantias') ?>">Termo Garantia</a></li>
           <?php
