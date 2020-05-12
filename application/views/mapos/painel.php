@@ -12,7 +12,7 @@
             <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) : ?>
                 <li class="bg_lb">
                     <a href="<?= base_url() ?>index.php/clientes"> <i class="fas fa-users" style="font-size:36px"></i>
-                        <div>Clientes <span class="badge badge-light">F1</span></div>
+                        <div>Viaturas <span class="badge badge-light">F1</span></div>
                     </a>
                 </li>
             <?php endif ?>
@@ -20,7 +20,7 @@
             <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vProduto')) : ?>
                 <li class="bg_lg">
                     <a href="<?= base_url() ?>index.php/produtos"> <i class="fas fa-shopping-bag" style="font-size:36px"></i>
-                        <div>Produtos <span class="badge badge-light">F2</span></div>
+                        <div>Peças e Acessórios <span class="badge badge-light">F2</span></div>
                     </a>
                 </li>
             <?php endif ?>
@@ -41,13 +41,13 @@
                 </li>
             <?php endif ?>
 
-            <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vVenda')) : ?>
+<!--             <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vVenda')) : ?>
                 <li class="bg_ls">
                     <a href="<?= base_url() ?>index.php/vendas"><i class="fas fa-cash-register" style="font-size:36px"></i>
                         <div>Vendas <span class="badge badge-light">F6</span></div>
                     </a>
                 </li>
-            <?php endif ?>
+            <?php endif ?> -->
 
             <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vGarantia')) : ?>
                 <li class="bg_ls">
@@ -67,15 +67,15 @@
         <div class="widget-box">
             <div class="widget-title">
                 <span class="icon"><i class="fas fa-shopping-bag"></i></span>
-                <h5>Produtos Com Estoque Mínimo</h5>
+                <h5>Peças e Acessórios Com Estoque Mínimo</h5>
             </div>
             <div class="widget-content">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th>Cod. Item</th>
-                            <th>Produto</th>
-                            <th>Preço de Venda</th>
+                            <th>Peças e Acessórios</th>
+<!--                             <th>Preço de Venda</th> -->
                             <th>Estoque</th>
                             <th>Estoque Mínimo</th>
                             <th>Ações</th>
@@ -91,9 +91,9 @@
                                     <td>
                                         <?= $p->descricao ?>
                                     </td>
-                                    <td>R$
+<!--                                     <td>R$
                                         <?= $p->precoVenda ?>
-                                    </td>
+                                    </td> -->
                                     <td>
                                         <?= $p->estoque ?>
                                     </td>
@@ -112,7 +112,7 @@
                             <?php endforeach ?>
                         <?php else : ?>
                             <tr>
-                                <td colspan="3">Nenhum produto com estoque baixo.</td>
+                                <td colspan="3">Nenhum peças e acessórios com estoque baixo.</td>
                             </tr>
                         <?php endif ?>
                     </tbody>
@@ -134,7 +134,7 @@
                             <th>N° OS</th>
                             <th>Data Inicial</th>
                             <th>Data Final</th>
-                            <th>Cliente</th>
+                            <th>Viatura</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -188,7 +188,7 @@
                         <th>N° OS</th>
                         <th>Data Inicial</th>
                         <th>Data Final</th>
-                        <th>Cliente</th>
+                        <th>Viatura</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -418,9 +418,9 @@
                     <div class="span12">
                         <ul class="site-stats">
                             <li class="bg_lh"><i class="fas fa-users"></i> <strong>
-                                    <?= $this->db->count_all('clientes'); ?></strong> <small>Clientes</small></li>
+                                    <?= $this->db->count_all('clientes'); ?></strong> <small>Viaturas  </small></li>
                             <li class="bg_lh"><i class="fas fa-shopping-bag"></i> <strong>
-                                    <?= $this->db->count_all('produtos'); ?></strong> <small>Produtos </small></li>
+                                    <?= $this->db->count_all('produtos'); ?></strong> <small>Peças e Acessórios </small></li>
                             <li class="bg_lh"><i class="fas fa-diagnoses"></i> <strong>
                                     <?= $this->db->count_all('os'); ?></strong> <small>Ordens de Serviço</small></li>
                             <li class="bg_lh"><i class="fas fa-wrench"></i> <strong>
@@ -574,7 +574,7 @@
             </div>
 
             <div class="control-group">
-                <label for="estoque" class="control-label">Adicionar Produtos<span class="required">*</span></label>
+                <label for="estoque" class="control-label">Adicionar Peças e Acessórios<span class="required">*</span></label>
                 <div class="controls">
                     <input type="hidden" id="idProduto" class="idProduto" name="id" value=""/>
                     <input id="estoque" type="text" name="estoque" value=""/>
