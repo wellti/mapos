@@ -32,7 +32,7 @@
                 <span class="icon">
                     <i class="fas fa-shopping-bag"></i>
                 </span>
-                <h5>Cadastro de Produto</h5>
+                <h5>Cadastro de Peças e Acessórios</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php echo $custom_error; ?>
@@ -68,12 +68,12 @@
                             <input id="precoCompra" class="money" type="text" name="precoCompra" value="<?php echo set_value('precoCompra'); ?>" />
                         </div>
                     </div>
-                    <div class="control-group">
+<!--  <div class="control-group">
                         <label for="precoVenda" class="control-label">Preço de Venda<span class="required">*</span></label>
                         <div class="controls">
                             <input id="precoVenda" class="money" type="text" name="precoVenda" value="<?php echo set_value('precoVenda'); ?>" />
                         </div>
-                    </div>
+                    </div> -->                   
                     <div class="control-group">
                         <label for="unidade" class="control-label">Unidade<span class="required">*</span></label>
                         <div class="controls">
@@ -127,13 +127,13 @@
                     required: true
                 },
                 precoCompra: {
-                    required: true
+                    required: false
                 },
                 precoVenda: {
-                    required: true
+                    required: false
                 },
                 estoque: {
-                    required: true
+                    required: false
                 }
             },
             messages: {

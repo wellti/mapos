@@ -4,7 +4,7 @@
             <div class="widget-title">
                 <a data-parent="#collapse-group" href="#collapseGOne" data-toggle="collapse">
                     <span class="icon"><i class="fas fa-shopping-bag"></i></span>
-                    <h5>Dados do Produto</h5>
+                    <h5>Dados do Peças e Acessórios</h5>
                 </a>
             </div>
         </div>
@@ -13,7 +13,7 @@
                 <table class="table table-bordered">
                     <tbody>
                         <tr>
-                            <td style="text-align: right; width: 30%"><strong>Código de Barra</strong></td>
+                            <td style="text-align: right; width: 30%"><strong>Código Peças e Acessórios</strong></td>
                             <td>
                                 <?php echo $result->codDeBarra ?>
                             </td>
@@ -36,12 +36,12 @@
                                 <?php echo $result->precoCompra; ?>
                             </td>
                         </tr>
-                        <tr>
+<!--                         <tr>
                             <td style="text-align: right"><strong>Preço de Venda</strong></td>
                             <td>R$
                                 <?php echo $result->precoVenda; ?>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td style="text-align: right"><strong>Estoque</strong></td>
                             <td>

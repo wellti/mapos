@@ -32,7 +32,7 @@
                 <span class="icon">
                     <i class="fas fa-shopping-bag"></i>
                 </span>
-                <h5>Editar Produto</h5>
+                <h5>Editar Peça e Acessório</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php echo $custom_error; ?>
@@ -72,11 +72,11 @@
                         </div>
                     </div>
 
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="precoVenda" class="control-label">Preço de Venda<span class="required">*</span></label>
                         <div class="controls">
                             <input id="precoVenda" class="money" type="text" name="precoVenda" value="<?php echo $result->precoVenda; ?>" />
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="control-group">
@@ -140,13 +140,13 @@
                     required: true
                 },
                 precoCompra: {
-                    required: true
+                    required: false
                 },
                 precoVenda: {
-                    required: true
+                    required: false
                 },
                 estoque: {
-                    required: true
+                    required: false
                 }
             },
             messages: {
