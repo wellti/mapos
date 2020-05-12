@@ -87,17 +87,17 @@ $config = [
         [
             'field' => 'precoCompra',
             'label' => 'Preo de Compra',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'precoVenda',
             'label' => 'Preo de Venda',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'estoque',
             'label' => 'Estoque',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'estoqueMinimo',
