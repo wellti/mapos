@@ -1,7 +1,7 @@
 
 <!--Footer-part-->
 <div class="row-fluid">
-    <div id="footer" class="span12"> <a href="https://github.com/RamonSilva20/mapos" target="_blank">
+    <div id="footer" class="span12"> <a href="" target="_blank">
         <?= date('Y'); ?> &copy; WS - Transporte </a></div>
   </div>
   <!--end-Footer-part-->
