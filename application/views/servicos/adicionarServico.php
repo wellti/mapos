@@ -16,12 +16,12 @@
                             <input id="nome" type="text" name="nome" value="<?php echo set_value('nome'); ?>" />
                         </div>
                     </div>
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="preco" class="control-label"><span class="required">Preço*</span></label>
                         <div class="controls">
                             <input id="preco" class="money" type="text" name="preco" value="<?php echo set_value('preco'); ?>" />
                         </div>
-                    </div>
+                    </div> -->
                     <div class="control-group">
                         <label for="descricao" class="control-label">Descrição</label>
                         <div class="controls">
@@ -52,7 +52,7 @@
                     required: true
                 },
                 preco: {
-                    required: true
+                    required: false
                 }
             },
             messages: {
