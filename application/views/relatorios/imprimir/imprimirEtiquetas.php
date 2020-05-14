@@ -39,11 +39,11 @@
 									<b>
 										<?php echo $p->idProdutos; ?>
 									</b>
-									<br /> Preço: R$
+<!-- 									<br /> Preço: R$
 									<b>
 										<?php $precoVenda = str_replace(".", ",", $p->precoVenda);
                                         echo $precoVenda; ?>
-									</b>
+									</b> -->
 								</div>
 								<div class="barcodecell">
 									<barcode code="<?= $p->codDeBarra ?>" text="0" type="<?= $this->input->get("etiquetaCode") ?>" size="0.7" disableborder="0"
@@ -69,8 +69,8 @@
 									<b>
 										<?php echo $p->idProdutos; ?>
 									</b>
-									<br /> Preço: R$
-									<b>
+<!-- 									<br /> Preço: R$
+									<b> -->
 										<?php $precoVenda = str_replace(".", ",", $p->precoVenda);
                                     echo $precoVenda; ?>
 									</b>
@@ -103,11 +103,11 @@
 									<b>
 										<?php echo $p->idProdutos; ?>
 									</b>
-									<br /> Preço: R$
+<!-- 									<br /> Preço: R$
 									<b>
 										<?php $precoVenda = str_replace(".", ",", $p->precoVenda);
                                         echo $precoVenda; ?>
-									</b>
+									</b> -->
 								</div>
 								<div class="barcodecell">
 									<barcode code="<?= $p->codDeBarra ?>" text="0" type="<?= $this->input->get("etiquetaCode") ?>" size="0.62" disableborder="0"
@@ -134,12 +134,12 @@
 								<div class="textoProdutoEtiqueta">Cod:
 									<b>
 										<?php echo $p->idProdutos; ?>
-									</b>
+<!-- 									</b>
 									<br /> Preço: R$
 									<b>
 										<?php $precoVenda = str_replace(".", ",", $p->precoVenda);
                                     echo $precoVenda; ?>
-									</b>
+									</b> -->
 								</div>
 
 								<div class="barcodecell">

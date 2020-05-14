@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>MAPOS - <?= $title ?>
+    <title>WS TRANSPORTES - <?= $title ?>
     </title>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -30,10 +30,10 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="font-size: 1.2em; padding: 5px;">Nome</th>
-                                    <th style="font-size: 1.2em; padding: 5px;">Documento</th>
-                                    <th style="font-size: 1.2em; padding: 5px;">Telefone</th>
-                                    <th style="font-size: 1.2em; padding: 5px;">Email</th>
+                                    <th style="font-size: 1.2em; padding: 5px;">Viatura</th>
+                                    <th style="font-size: 1.2em; padding: 5px;">Renavan</th>
+                                    <th style="font-size: 1.2em; padding: 5px;">Placa</th>
+<!--                                     <th style="font-size: 1.2em; padding: 5px;">Email</th> -->
                                     <th style="font-size: 1.2em; padding: 5px;">Cadastro</th>
                                 </tr>
                             </thead>
@@ -48,11 +48,11 @@
                                         <?= $c->documento ?>
                                     </td>
                                     <td>
-                                        <?= $c->telefone ?>
+                                        <?= $c->rua ?>
                                     </td>
-                                    <td>
+<!--                                     <td>
                                         <?= $c->email ?>
-                                    </td>
+                                    </td> -->
                                     <td>
                                         <?= $dataCadastro ?>
                                     </td>

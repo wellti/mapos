@@ -20,7 +20,7 @@
                 <div class="widget-box">
                     <?= $topo ?>
                     <div class="widget-title">
-                        <h4 style="text-align: center">Produtos</h4>
+                        <h4 style="text-align: center">Peças e Acessórios</h4>
                     </div>
                     <div class="widget-content nopadding">
                         <table class="table table-bordered">
@@ -28,8 +28,8 @@
                                 <tr>
                                     <th style="font-size: 1.2em; padding: 5px;">Nome</th>
                                     <th style="font-size: 1.2em; padding: 5px;">UN</th>
-                                    <th style="font-size: 1.2em; padding: 5px;">Preço Compra</th>
-                                    <th style="font-size: 1.2em; padding: 5px;">Preço Venda</th>
+<!--                                     <th style="font-size: 1.2em; padding: 5px;">Preço Compra</th>
+                                    <th style="font-size: 1.2em; padding: 5px;">Preço Venda</th> -->
                                     <th style="font-size: 1.2em; padding: 5px;">Estoque</th>
                                 </tr>
                             </thead>
@@ -39,8 +39,8 @@
                                         echo '<tr>';
                                         echo '<td>' . $p->descricao . '</td>';
                                         echo '<td>' . $p->unidade . '</td>';
-                                        echo '<td>' . $p->precoCompra . '</td>';
-                                        echo '<td>' . $p->precoVenda . '</td>';
+                                        // echo '<td>' . $p->precoCompra . '</td>';
+                                        // echo '<td>' . $p->precoVenda . '</td>';
                                         echo '<td>' . $p->estoque . '</td>';
                                         echo '</tr>';
                                     }

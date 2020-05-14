@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>MAPOS</title>
+    <title>WS TRANSPORTES</title>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,13 +28,13 @@
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="padding: 5px;">CLIENTE</th>
+                                    <th style="padding: 5px;">VIATURA</th>
                                     <th style="padding: 5px;">STATUS</th>
                                     <th style="padding: 5px;">DATA</th>
                                     <th style="padding: 5px;">DESCRIÇÃO</th>
-                                    <th style="padding: 5px;">TOTAL PRODUTOS</th>
+                                    <th style="padding: 5px;">TOTAL PEÇAS E ACESSÓRIOS</th>
                                     <th style="padding: 5px;">TOTAL SERVIÇOS</th>
-                                    <th style="padding: 5px;">TOTAL</th>
+<!--                                     <th style="padding: 5px;">TOTAL</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,10 +45,10 @@
                                         echo '<td><small>' . $c->status . '</small></td>';
                                         echo '<td><small>' . date('d/m/Y', strtotime($c->dataInicial)) . '</small></td>';
                                         echo '<td><small>' . $c->descricaoProduto . '</small></td>';
-                                        echo '<td><small>R$ ' . number_format($c->total_produto, 2, ',', '.') . '</small></td>';
-                                        echo '<td><small>R$ ' . number_format($c->total_servico, 2, ',', '.') . '</small></td>';
-                                        echo '<td><small>R$ ' . number_format($c->total_produto + $c->total_servico, 2, ',', '.') . '</small></td>';
-                                        echo '</tr>';
+                                        // echo '<td><small>R$ ' . number_format($c->total_produto, 2, ',', '.') . '</small></td>';
+                                        // echo '<td><small>R$ ' . number_format($c->total_servico, 2, ',', '.') . '</small></td>';
+                                        // echo '<td><small>R$ ' . number_format($c->total_produto + $c->total_servico, 2, ',', '.') . '</small></td>';
+                                        // echo '</tr>';
                                     }
                                 ?>
                             </tbody>

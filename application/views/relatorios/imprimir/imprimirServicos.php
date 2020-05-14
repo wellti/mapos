@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>MAPOS</title>
+    <title>WS TRANSPORTES</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" />
@@ -28,7 +28,7 @@
                                 <tr>
                                     <th style="font-size: 1.2em; padding: 5px;">Nome</th>
                                     <th style="font-size: 1.2em; padding: 5px;">Descrição</th>
-                                    <th style="font-size: 1.2em; padding: 5px;">Preço</th>
+<!--                                     <th style="font-size: 1.2em; padding: 5px;">Preço</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,7 +37,7 @@
                                         echo '<tr>';
                                         echo '<td>' . $s->nome . '</td>';
                                         echo '<td>' . $s->descricao . '</td>';
-                                        echo '<td>' . $s->preco . '</td>';
+                                        // echo '<td>' . $s->preco . '</td>';
                                         echo '</tr>';
                                     }
                                 ?>
