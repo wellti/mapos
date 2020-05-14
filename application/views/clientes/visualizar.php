@@ -35,7 +35,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="text-align: right"><strong>Documento</strong></td>
+                                        <td style="text-align: right"><strong>Renavan</strong></td>
                                         <td>
                                             <?php echo $result->documento ?>
                                         </td>

@@ -18,7 +18,7 @@
                 <form action="<?php echo current_url(); ?>" id="formCliente" method="post" class="form-horizontal">
 
                   <div class="control-group">
-                      <label for="documento" class="control-label">Viatura<span class="required">*</span></label>
+                      <label for="documento" class="control-label">Renavan<span class="required">*</span></label>
                       <div class="controls">
                           <input id="documento" type="text" name="documento" value="<?php echo $result->documento; ?>" />
                           <!-- <button id="buscar_info_cnpj" class="btn btn-xs" type="button">Buscar Informações (CNPJ)</button> -->
@@ -26,13 +26,13 @@
                   </div>
                     <div class="control-group">
                         <?php echo form_hidden('idClientes', $result->idClientes) ?>
-                        <label for="nomeCliente" class="control-label">Placa<span class="required">*</span></label>
+                        <label for="nomeCliente" class="control-label">Viatura<span class="required">*</span></label>
                         <div class="controls">
                             <input id="nomeCliente" type="text" name="nomeCliente" value="<?php echo $result->nomeCliente; ?>" />
                         </div>
                     </div>
                     <div class="control-group">
-                        <label for="contato" class="control-label">Renavan:<span class="required">*</span></label>
+                        <label for="contato" class="control-label">Placa:<span class="required">*</span></label>
                         <div class="controls">
                             <input class="nomeCliente" type="text" name="contato" value="<?php echo $result->contato; ?>" />
                         </div>

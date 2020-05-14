@@ -15,8 +15,8 @@
             <thead>
                 <tr>
                     <th>Cod.</th>
+                    <th>Renavan</th>
                     <th>Viatura</th>
-                    <th>Placa</th>
                     <th>Setor</th>
 <!--                     <th>Email</th> -->
                     <th>Ações</th>
@@ -36,7 +36,7 @@
                         echo '<td>' . $r->documento . '</td>';
                         echo '<td>' . $r->nomeCliente . '</td>';
                         echo '<td>' . $r->rua . '</td>';
-                        echo '<td>' . $r->email . '</td>';
+                        // echo '<td>' . $r->email . '</td>';
                         echo '<td>';
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) {
                             echo '<a href="' . base_url() . 'index.php/clientes/visualizar/' . $r->idClientes . '" style="margin-right: 1%" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
@@ -63,7 +63,7 @@
     <form action="<?php echo base_url() ?>index.php/clientes/excluir" method="post">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h5 id="myModalLabel">Excluir Cliente</h5>
+            <h5 id="myModalLabel">Excluir Viatura</h5>
         </div>
         <div class="modal-body">
             <input type="hidden" id="idCliente" name="id" value="" />

@@ -153,7 +153,7 @@
                                         <input type="hidden" name="idProduto" id="idProduto" />
                                         <input type="hidden" name="idOsProduto" id="idOsProduto" value="<?php echo $result->idOs; ?>" />
                                         <input type="hidden" name="estoque" id="estoque" value="" />
-                                        <label for="">Produto</label>
+                                        <label for="">Peças e Acessórios</label>
                                         <input type="text" class="span12" name="produto" id="produto" placeholder="Digite o nome do produto" />
                                     </div>
 <!--                                     <div class="span2">
@@ -174,7 +174,7 @@
                                 <table class="table table-bordered" id="tblProdutos">
                                     <thead>
                                         <tr>
-                                            <th>Produto</th>
+                                            <th>Peças e Acessórios</th>
                                             <th>Quantidade</th>
                                             <!-- <th>Preço unit.</th> -->
                                             <th>Ações</th>
@@ -483,10 +483,10 @@
                     required: true
                 },
                 valor: {
-                    required: true
+                    required: false 
                 },
                 vencimento: {
-                    required: true
+                    required: false
                 }
 
             },
