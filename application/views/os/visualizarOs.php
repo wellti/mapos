@@ -15,11 +15,11 @@ $totalProdutos = 0; ?>
 } ?>
 
                     <a target="_blank" title="Imprimir OS" class="btn btn-mini btn-inverse" href="<?php echo site_url() ?>/os/imprimir/<?php echo $result->idOs; ?>"><i class="fas fa-print"></i> Imprimir A4</a>
-                    <a target="_blank" title="Imprimir OS" class="btn btn-mini btn-inverse" href="<?php echo site_url() ?>/os/imprimirTermica/<?php echo $result->idOs; ?>"><i class="fas fa-print"></i> Imprimir Não Fiscal</a>
-                    <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eOs')) {
+<!--                     <a target="_blank" title="Imprimir OS" class="btn btn-mini btn-inverse" href="<?php echo site_url() ?>/os/imprimirTermica/<?php echo $result->idOs; ?>"><i class="fas fa-print"></i> Imprimir Não Fiscal</a> -->
+<!--                     <?php if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eOs')) {
     $zapnumber = preg_replace("/[^0-9]/", "", $result->celular_cliente);
     echo '<a title="Enviar Por WhatsApp" class="btn btn-mini btn-success" id="enviarWhatsApp" target="_blank" href="https://web.whatsapp.com/send?phone=55' . $zapnumber . '&text=Prezado(a)%20*' . $result->nomeCliente . '*.%0d%0a%0d%0aSua%20*O.S%20' . $result->idOs . '*%20referente%20ao%20equipamento%20*' . strip_tags($result->descricaoProduto) . '*%20foi%20atualizada%20para%20*' . $result->status . '*.%0d%0aFavor%20entrar%20em%20contato%20para%20saber%20mais%20detalhes.%0d%0a%0d%0aAtenciosamente,%20_' . ($emitente ? $emitente[0]->nome : '') . '%20' . ($emitente ? $emitente[0]->telefone : '') . '_"><i class="fab fa-whatsapp"></i> WhatsApp</a>';
-} ?>
+} ?> -->
 
                     <a title="Enviar por E-mail" class="btn btn-mini btn-warning" href="<?php echo site_url() ?>/os/enviar_email/<?php echo $result->idOs; ?>"><i class="fas fa-envelope"></i> Enviar por E-mail</a>
                     <?php if ($result->garantias_id) { ?> <a target="_blank" title="Imprimir Termo de Garantia" class="btn btn-mini btn-inverse" href="<?php echo site_url() ?>/garantias/imprimir/<?php echo $result->garantias_id; ?>"><i class="fas fa-text-width"></i> Imprimir Termo de Garantia</a> <?php  } ?>
@@ -54,10 +54,8 @@ $totalProdutos = 0; ?>
                                                 <span>
                                                     <h5><b>VIATURA</b></h5>
                                                     <span><?php echo $result->nomeCliente ?></span><br />
-                                                    <span><?php echo $result->rua ?>, <?php echo $result->numero ?>, <?php echo $result->bairro ?></span>,
-                                                    <span><?php echo $result->cidade ?> - <?php echo $result->estado ?></span><br>
-                                                    <span>E-mail: <?php echo $result->email ?></span><br>
-                                                    <span>Contato: <?php echo $result->celular_cliente ?></span>
+                                                    <span>Renavan: <?php echo $result->documento ?></span>,<br />
+                                                    <span>Setor: <?php echo $result->rua?></span>,<br />
                                             </li>
                                         </ul>
                                     </td>
@@ -202,7 +200,7 @@ $totalProdutos = 0; ?>
                                         <th>Sub-total</th> -->
                                     </tr>
                                 </thead>
-<!--                                 <tbody>
+                                <tbody>
                                     <?php
                                     setlocale(LC_MONETARY, 'en_US');
                                     foreach ($servicos as $s) {
@@ -212,16 +210,16 @@ $totalProdutos = 0; ?>
                                         echo '<tr>';
                                         echo '<td>' . $s->nome . '</td>';
                                         echo '<td>' . ($s->quantidade ?: 1) . '</td>';
-                                        echo '<td>' . $preco . '</td>';
-                                        echo '<td>R$ ' . number_format($subtotal, 2, ',', '.') . '</td>';
+                                        // echo '<td>' . $preco . '</td>';
+                                        // echo '<td>R$ ' . number_format($subtotal, 2, ',', '.') . '</td>';
                                         echo '</tr>';
                                     } ?>
 
-                                    <tr>
+<!--                                     <tr>
                                         <td colspan="3" style="text-align: right"><strong>Total:</strong></td>
                                         <td><strong>R$ <?php echo number_format($totalServico, 2, ',', '.'); ?></strong></td>
-                                    </tr>
-                                </tbody> -->
+                                    </tr> -->
+                                </tbody>
                             </table>
                         <?php } ?>
                         <?php
