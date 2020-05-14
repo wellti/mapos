@@ -101,7 +101,7 @@
                                     </div>
                                     <div class="span6" style="padding: 1%; margin-left: 0">
                                         <label for="descricaoProduto">
-                                            <h4>Descrição Peça e Acessórios/Serviço</h4>
+                                            <h4>Descrição Peça e Acessórios/Serviços</h4>
                                         </label>
                                         <textarea class="span12 editor" name="descricaoProduto" id="descricaoProduto" cols="30" rows="5"><?php echo $result->descricaoProduto ?></textarea>
                                     </div>
@@ -154,7 +154,7 @@
                                         <input type="hidden" name="idOsProduto" id="idOsProduto" value="<?php echo $result->idOs; ?>" />
                                         <input type="hidden" name="estoque" id="estoque" value="" />
                                         <label for="">Peças e Acessórios</label>
-                                        <input type="text" class="span12" name="produto" id="produto" placeholder="Digite o nome do produto" />
+                                        <input type="text" class="span12" name="produto" id="produto" placeholder="Digite o nome da Peça ou Acessório" />
                                     </div>
 <!--                                     <div class="span2">
                                         <label for="">Preço</label>
@@ -181,7 +181,7 @@
                                             <!-- <th>Sub-total</th> -->
                                         </tr>
                                     </thead>
-<!--                                     <tbody>
+                                     <tbody>
                                         <?php
                                         $total = 0;
                                         foreach ($produtos as $p) {
@@ -189,17 +189,17 @@
                                             echo '<tr>';
                                             echo '<td>' . $p->descricao . '</td>';
                                             echo '<td>' . $p->quantidade . '</td>';
-                                            echo '<td>' . ($p->preco ?: $p->precoVenda)  . '</td>';
+                                            // echo '<td>' . ($p->preco ?: $p->precoVenda)  . '</td>';
                                             echo '<td><a href="" idAcao="' . $p->idProdutos_os . '" prodAcao="' . $p->idProdutos . '" quantAcao="' . $p->quantidade . '" title="Excluir Produto" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>';
                                             echo '<td>R$ ' . number_format($p->subTotal, 2, ',', '.') . '</td>';
                                             echo '</tr>';
                                         } ?>
-                                        <tr>
+<!--                                         <tr>
                                             <td colspan="4" style="text-align: right"><strong>Total:</strong></td>
                                             <td><strong>R$
                                                     <?php echo number_format($total, 2, ',', '.'); ?><input type="hidden" id="total-venda" value="<?php echo number_format($total, 2); ?>"></strong></td>
-                                        </tr>
-                                    </tbody> -->
+                                        </tr> -->
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -239,7 +239,7 @@
 <!--                                                 <th>Sub-total</th> -->
                                             </tr>
                                         </thead>
-<!--                                         <tbody>
+                                        <tbody>
                                             <?php
                                             $total = 0;
                                             foreach ($servicos as $s) {
@@ -249,17 +249,17 @@
                                                 echo '<tr>';
                                                 echo '<td>' . $s->nome . '</td>';
                                                 echo '<td>' . ($s->quantidade ?: 1) . '</td>';
-                                                echo '<td>' . $preco  . '</td>';
+                                                // echo '<td>' . $preco  . '</td>';
                                                 echo '<td><span idAcao="' . $s->idServicos_os . '" title="Excluir Serviço" class="btn btn-danger servico"><i class="fas fa-trash-alt"></i></span></td>';
-                                                echo '<td>R$ ' . number_format($subtotal, 2, ',', '.') . '</td>';
+                                                // echo '<td>R$ ' . number_format($subtotal, 2, ',', '.') . '</td>';
                                                 echo '</tr>';
                                             } ?>
-                                            <tr>
+<!--                                             <tr>
                                                 <td colspan="4" style="text-align: right"><strong>Total:</strong></td>
                                                 <td><strong>R$
                                                         <?php echo number_format($total, 2, ',', '.'); ?><input type="hidden" id="total-servico" value="<?php echo number_format($total, 2); ?>"></strong></td>
-                                            </tr>
-                                        </tbody> -->
+                                            </tr> -->
+                                        </tbody> 
                                     </table>
                                 </div>
                             </div>
@@ -463,16 +463,16 @@
             }
         });
 
-        $(document).on('click', '#btn-faturar', function(event) {
-            event.preventDefault();
-            valor = $('#total-venda').val();
-            total_servico = $('#total-servico').val();
-            valor = valor.replace(',', '');
-            total_servico = total_servico.replace(',', '');
-            total_servico = parseFloat(total_servico);
-            valor = parseFloat(valor);
-            $('#valor').val(valor + total_servico);
-        });
+        // $(document).on('click', '#btn-faturar', function(event) {
+        //     event.preventDefault();
+        //     valor = $('#total-venda').val();
+        //     total_servico = $('#total-servico').val();
+        //     valor = valor.replace(',', '');
+        //     total_servico = total_servico.replace(',', '');
+        //     total_servico = parseFloat(total_servico);
+        //     valor = parseFloat(valor);
+        //     $('#valor').val(valor + total_servico);
+        // });
 
         $("#formFaturar").validate({
             rules: {
@@ -537,7 +537,7 @@
             select: function(event, ui) {
                 $("#idProduto").val(ui.item.id);
                 $("#estoque").val(ui.item.estoque);
-                $("#preco").val(ui.item.preco);
+                // $("#preco").val(ui.item.preco);
                 $("#quantidade").focus();
             }
         });
@@ -547,7 +547,7 @@
             minLength: 2,
             select: function(event, ui) {
                 $("#idServico").val(ui.item.id);
-                $("#preco_servico").val(ui.item.preco);
+                // $("#preco_servico").val(ui.item.preco);
                 $("#quantidade_servico").focus();
             }
         });
@@ -636,7 +636,7 @@
                     required: true
                 },
                 preco: {
-                    required: true
+                    required: false
                 },
                 quantidade: {
                     required: true
@@ -646,9 +646,9 @@
                 produto: {
                     required: 'Insira o produto'
                 },
-                preco: {
-                    required: 'Insira o preço'
-                },
+                // preco: {
+                //     required: 'Insira o preço'
+                // },
                 quantidade: {
                     required: 'Insira a quantidade'
                 }
@@ -678,7 +678,7 @@
                         success: function() {
                             $("#divProdutos").load("<?php echo current_url(); ?> #divProdutos");
                             $("#quantidade").val('');
-                            $("#preco").val('');
+                            // $("#preco").val('');
                             $("#produto").val('').focus();
                         },
                         error: function() {
@@ -701,7 +701,7 @@
                     required: true
                 },
                 preco: {
-                    required: true
+                    required: false
                 },
                 quantidade: {
                     required: true
@@ -730,7 +730,7 @@
                     success: function() {
                         $("#divServicos").load("<?php echo current_url(); ?> #divServicos");
                         $("#quantidade_servico").val('');
-                        $("#preco_servico").val('');
+                        // $("#preco_servico").val('');
                         $("#servico").val('').focus();
                     },
                     error: function() {

@@ -58,16 +58,16 @@ class Produtos extends MY_Controller
         if ($this->form_validation->run('produtos') == false) {
             $this->data['custom_error'] = (validation_errors() ? '<div class="form_error">' . validation_errors() . '</div>' : false);
         } else {
-            $precoCompra = $this->input->post('precoCompra');
-            $precoCompra = str_replace(",", "", $precoCompra);
-            $precoVenda = $this->input->post('precoVenda');
-            $precoVenda = str_replace(",", "", $precoVenda);
+            // $precoCompra = $this->input->post('precoCompra');
+            // $precoCompra = str_replace(",", "", $precoCompra);
+            // $precoVenda = $this->input->post('precoVenda');
+            // $precoVenda = str_replace(",", "", $precoVenda);
             $data = [
                 'codDeBarra' => set_value('codDeBarra'),
                 'descricao' => set_value('descricao'),
                 'unidade' => set_value('unidade'),
-                'precoCompra' => $precoCompra,
-                'precoVenda' => $precoVenda,
+                // 'precoCompra' => $precoCompra,
+                // 'precoVenda' => $precoVenda,
                 'estoque' => set_value('estoque'),
                 'estoqueMinimo' => set_value('estoqueMinimo'),
                 'saida' => set_value('saida'),
@@ -103,16 +103,16 @@ class Produtos extends MY_Controller
         if ($this->form_validation->run('produtos') == false) {
             $this->data['custom_error'] = (validation_errors() ? '<div class="form_error">' . validation_errors() . '</div>' : false);
         } else {
-            $precoCompra = $this->input->post('precoCompra');
-            $precoCompra = str_replace(",", "", $precoCompra);
-            $precoVenda = $this->input->post('precoVenda');
-            $precoVenda = str_replace(",", "", $precoVenda);
+            // $precoCompra = $this->input->post('precoCompra');
+            // $precoCompra = str_replace(",", "", $precoCompra);
+            // $precoVenda = $this->input->post('precoVenda');
+            // $precoVenda = str_replace(",", "", $precoVenda);
             $data = [
                 'codDeBarra' => set_value('codDeBarra'),
                 'descricao' => $this->input->post('descricao'),
                 'unidade' => $this->input->post('unidade'),
-                'precoCompra' => $precoCompra,
-                'precoVenda' => $precoVenda,
+                // 'precoCompra' => $precoCompra,
+                // 'precoVenda' => $precoVenda,
                 'estoque' => $this->input->post('estoque'),
                 'estoqueMinimo' => $this->input->post('estoqueMinimo'),
                 'saida' => set_value('saida'),

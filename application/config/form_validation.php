@@ -82,7 +82,7 @@ $config = [
         [
             'field' => 'unidade',
             'label' => 'Unidade',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'precoCompra',
@@ -184,7 +184,7 @@ $config = [
         [
             'field' => 'dataFinal',
             'label' => 'DataFinal',
-            'rules' => 'trim|required',
+            'rules' => 'trim',
         ],
         [
             'field' => 'garantia',
@@ -360,24 +360,68 @@ $config = [
         [
             'field' => 'clientes_id',
             'label' => 'clientes',
-            'rules' => 'trim|required',
+            'rules' => 'trim',
         ],
         [
             'field' => 'usuarios_id',
             'label' => 'usuarios_id',
-            'rules' => 'trim|required',
+            'rules' => 'trim',
         ]
     ],
     'anotacoes_os' => [
         [
             'field' => 'anotacao',
             'label' => 'Anotação',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'os_id',
             'label' => 'ID Os',
-            'rules' => 'trim|required|integer',
+            'rules' => 'trim|integer',
         ]
     ],
+    'adicionar_produto_os' => [
+        [
+            'field' => 'idProduto',
+            'label' => 'idProduto',
+            'rules' => 'trim|required|numeric',
+        ],
+        [
+            'field' => 'quantidade',
+            'label' => 'quantidade',
+            'rules' => 'trim|required|numeric|greater_than[0]',
+        ],
+        [
+            'field' => 'preco',
+            'label' => 'preco',
+            'rules' => 'trim',
+        ],
+        [
+            'field' => 'idOsProduto',
+            'label' => 'idOsProduto',
+            'rules' => 'trim',
+        ],
+    ],
+    'adicionar_servico_os' => [
+        [
+            'field' => 'idServico',
+            'label' => 'idServico',
+            'rules' => 'trim|required|numeric',
+        ],
+        [
+            'field' => 'quantidade',
+            'label' => 'quantidade',
+            'rules' => 'trim|required|numeric|greater_than[0]',
+        ],
+        [
+            'field' => 'preco',
+            'label' => 'preco',
+            'rules' => 'trim',
+        ],
+        [
+            'field' => 'idOsServico',
+            'label' => 'idOsServico',
+            'rules' => 'trim|required|numeric',
+        ],
+    ]
 ];
