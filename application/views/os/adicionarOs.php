@@ -42,7 +42,7 @@
                                 <form action="<?php echo current_url(); ?>" method="post" id="formOs">
                                     <div class="span12" style="padding: 1%">
                                         <div class="span6">
-                                            <label for="cliente">Cliente<span class="required">*</span></label>
+                                            <label for="cliente">Viatura<span class="required">*</span></label>
                                             <input id="cliente" class="span12" type="text" name="cliente" value="" />
                                             <input id="clientes_id" class="span12" type="hidden" name="clientes_id" value="" />
                                         </div>
@@ -69,7 +69,7 @@
                                             <input id="dataInicial" autocomplete="off" class="span12 datepicker" type="text" name="dataInicial" value="<?php echo date('d/m/Y'); ?>" />
                                         </div>
                                         <div class="span3">
-                                            <label for="dataFinal">Data Final<span class="required">*</span></label>
+                                            <label for="dataFinal">Data Final<span class=""></span></label>
                                             <input id="dataFinal" autocomplete="off" class="span12 datepicker" type="text" name="dataFinal" value="" />
                                         </div>
                                         <div class="span3">
@@ -157,7 +157,7 @@
                     required: true
                 },
                 dataFinal: {
-                    required: true
+                    required: false
                 }
 
             },

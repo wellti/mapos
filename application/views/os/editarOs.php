@@ -29,7 +29,7 @@
                 <div class="span12" id="divProdutosServicos" style=" margin-left: 0">
                     <ul class="nav nav-tabs">
                         <li class="active" id="tabDetalhes"><a href="#tab1" data-toggle="tab">Detalhes da OS</a></li>
-                        <li id="tabProdutos"><a href="#tab2" data-toggle="tab">Produtos</a></li>
+                        <li id="tabProdutos"><a href="#tab2" data-toggle="tab">Peças e Acessórios</a></li>
                         <li id="tabServicos"><a href="#tab3" data-toggle="tab">Serviços</a></li>
                         <li id="tabAnexos"><a href="#tab4" data-toggle="tab">Anexos</a></li>
                         <li id="tabAnotacoes"><a href="#tab5" data-toggle="tab">Anotações</a></li>
@@ -44,7 +44,7 @@
                                             <?php echo $result->idOs; ?>
                                         </h3>
                                         <div class="span6" style="margin-left: 0">
-                                            <label for="cliente">Cliente<span class="required">*</span></label>
+                                            <label for="cliente">Viatura<span class="required">*</span></label>
                                             <input id="cliente" class="span12" type="text" name="cliente" value="<?php echo $result->nomeCliente ?>" />
                                             <input id="clientes_id" class="span12" type="hidden" name="clientes_id" value="<?php echo $result->clientes_id ?>" />
                                             <input id="valorTotal" type="hidden" name="valorTotal" value="" />
@@ -87,7 +87,7 @@
                                             <input id="dataInicial" autocomplete="off" class="span12 datepicker" type="text" name="dataInicial" value="<?php echo date('d/m/Y', strtotime($result->dataInicial)); ?>" />
                                         </div>
                                         <div class="span3">
-                                            <label for="dataFinal">Data Final<span class="required">*</span></label>
+                                            <label for="dataFinal">Data Final<span class=""></span></label>
                                             <input id="dataFinal" autocomplete="off" class="span12 datepicker" type="text" name="dataFinal" value="<?php echo date('d/m/Y', strtotime($result->dataFinal)); ?>" />
                                         </div>
                                         <div class="span3">
@@ -101,7 +101,7 @@
                                     </div>
                                     <div class="span6" style="padding: 1%; margin-left: 0">
                                         <label for="descricaoProduto">
-                                            <h4>Descrição Produto/Serviço</h4>
+                                            <h4>Descrição Peça e Acessórios/Serviço</h4>
                                         </label>
                                         <textarea class="span12 editor" name="descricaoProduto" id="descricaoProduto" cols="30" rows="5"><?php echo $result->descricaoProduto ?></textarea>
                                     </div>
@@ -156,10 +156,10 @@
                                         <label for="">Produto</label>
                                         <input type="text" class="span12" name="produto" id="produto" placeholder="Digite o nome do produto" />
                                     </div>
-                                    <div class="span2">
+<!--                                     <div class="span2">
                                         <label for="">Preço</label>
                                         <input type="text" placeholder="Preço" id="preco" name="preco" class="span12 money" />
-                                    </div>
+                                    </div> -->
                                     <div class="span2">
                                         <label for="">Quantidade</label>
                                         <input type="text" placeholder="Quantidade" id="quantidade" name="quantidade" class="span12" />
@@ -176,12 +176,12 @@
                                         <tr>
                                             <th>Produto</th>
                                             <th>Quantidade</th>
-                                            <th>Preço unit.</th>
+                                            <!-- <th>Preço unit.</th> -->
                                             <th>Ações</th>
-                                            <th>Sub-total</th>
+                                            <!-- <th>Sub-total</th> -->
                                         </tr>
                                     </thead>
-                                    <tbody>
+<!--                                     <tbody>
                                         <?php
                                         $total = 0;
                                         foreach ($produtos as $p) {
@@ -199,7 +199,7 @@
                                             <td><strong>R$
                                                     <?php echo number_format($total, 2, ',', '.'); ?><input type="hidden" id="total-venda" value="<?php echo number_format($total, 2); ?>"></strong></td>
                                         </tr>
-                                    </tbody>
+                                    </tbody> -->
                                 </table>
                             </div>
                         </div>
@@ -214,10 +214,10 @@
                                             <label for="">Serviço</label>
                                             <input type="text" class="span12" name="servico" id="servico" placeholder="Digite o nome do serviço" />
                                         </div>
-                                        <div class="span2">
+<!--                                         <div class="span2">
                                             <label for="">Preço</label>
                                             <input type="text" placeholder="Preço" id="preco_servico" name="preco" class="span12 money" />
-                                        </div>
+                                        </div> -->
                                         <div class="span2">
                                             <label for="">Quantidade</label>
                                             <input type="text" placeholder="Quantidade" id="quantidade_servico" name="quantidade" class="span12" />
@@ -234,12 +234,12 @@
                                             <tr>
                                                 <th>Serviço</th>
                                                 <th>Quantidade</th>
-                                                <th>Preço</th>
+<!--                                                 <th>Preço</th> -->
                                                 <th>Ações</th>
-                                                <th>Sub-total</th>
+<!--                                                 <th>Sub-total</th> -->
                                             </tr>
                                         </thead>
-                                        <tbody>
+<!--                                         <tbody>
                                             <?php
                                             $total = 0;
                                             foreach ($servicos as $s) {
@@ -259,7 +259,7 @@
                                                 <td><strong>R$
                                                         <?php echo number_format($total, 2, ',', '.'); ?><input type="hidden" id="total-servico" value="<?php echo number_format($total, 2); ?>"></strong></td>
                                             </tr>
-                                        </tbody>
+                                        </tbody> -->
                                     </table>
                                 </div>
                             </div>
@@ -384,7 +384,7 @@
 </div>
 
 <!-- Modal Faturar-->
-<div id="modal-faturar" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- <div id="modal-faturar" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <form id="formFaturar" action="<?php echo current_url() ?>" method="post">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -443,7 +443,7 @@
                 <button class="btn btn-primary">Faturar</button>
             </div>
     </form>
-</div>
+</div> -->
 
 
 <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.validate.js"></script>

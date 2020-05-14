@@ -52,7 +52,7 @@ $totalProdutos = 0; ?>
                                         <ul>
                                             <li>
                                                 <span>
-                                                    <h5><b>CLIENTE</b></h5>
+                                                    <h5><b>VIATURA</b></h5>
                                                     <span><?php echo $result->nomeCliente ?></span><br />
                                                     <span><?php echo $result->rua ?>, <?php echo $result->numero ?>, <?php echo $result->bairro ?></span>,
                                                     <span><?php echo $result->cidade ?> - <?php echo $result->estado ?></span><br>
@@ -164,10 +164,10 @@ $totalProdutos = 0; ?>
                             <table class="table table-bordered table-condensed" id="tblProdutos">
                                 <thead>
                                     <tr>
-                                        <th>Produto</th>
+                                        <th>Peças e Acessório</th>
                                         <th>Quantidade</th>
-                                        <th>Preço unit.</th>
-                                        <th>Sub-total</th>
+<!--                                         <th>Preço unit.</th>
+                                        <th>Sub-total</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -178,16 +178,16 @@ $totalProdutos = 0; ?>
                                         echo '<tr>';
                                         echo '<td>' . $p->descricao . '</td>';
                                         echo '<td>' . $p->quantidade . '</td>';
-                                        echo '<td>' . $p->preco ?: $p->precoVenda . '</td>';
-                                        echo '<td>R$ ' . number_format($p->subTotal, 2, ',', '.') . '</td>';
+                                        // echo '<td>' . $p->preco ?: $p->precoVenda . '</td>';
+                                        // echo '<td>R$ ' . number_format($p->subTotal, 2, ',', '.') . '</td>';
                                         echo '</tr>';
                                     } ?>
 
-                                    <tr>
+<!--                                     <tr>
                                         <td></td>
                                         <td colspan="2" style="text-align: right"><strong>Total:</strong></td>
                                         <td><strong>R$ <?php echo number_format($totalProdutos, 2, ',', '.'); ?></strong></td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         <?php } ?>
@@ -198,11 +198,11 @@ $totalProdutos = 0; ?>
                                     <tr>
                                         <th>Serviço</th>
                                         <th>Quantidade</th>
-                                        <th>Preço unit.</th>
-                                        <th>Sub-total</th>
+<!--                                         <th>Preço unit.</th>
+                                        <th>Sub-total</th> -->
                                     </tr>
                                 </thead>
-                                <tbody>
+<!--                                 <tbody>
                                     <?php
                                     setlocale(LC_MONETARY, 'en_US');
                                     foreach ($servicos as $s) {
@@ -221,7 +221,7 @@ $totalProdutos = 0; ?>
                                         <td colspan="3" style="text-align: right"><strong>Total:</strong></td>
                                         <td><strong>R$ <?php echo number_format($totalServico, 2, ',', '.'); ?></strong></td>
                                     </tr>
-                                </tbody>
+                                </tbody> -->
                             </table>
                         <?php } ?>
                         <?php
