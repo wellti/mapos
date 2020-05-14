@@ -38,7 +38,7 @@
                         </div>
                         <div class="span12 well" style="margin-left: 0">
                             <div class="span6">
-                                <label for="">Cliente:</label>
+                                <label for="">Viatura:</label>
                                 <input type="text" id="cliente" class="span12" />
                                 <input type="hidden" name="cliente" id="clienteHide" />
                             </div>

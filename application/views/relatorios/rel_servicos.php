@@ -27,7 +27,7 @@
                     <form target="_blank" action="<?php echo base_url() ?>index.php/relatorios/servicosCustom" method="get">
                         <div class="span12 well">
                             <div class="span6">
-                                <label for="">Preço de:</label>
+                                <label for="">de:</label>
                                 <input type="text" name="precoInicial" class="span12 money" />
                             </div>
                             <div class="span6">

@@ -9,7 +9,7 @@
             </div>
             <div class="widget-content">
                 <ul class="site-stats">
-                    <li><a href="<?php echo base_url() ?>index.php/relatorios/clientesRapid" target="_blank"><i class="fas fa-users"></i> <small>Todos os Clientes</small></a></li>
+                    <li><a href="<?php echo base_url() ?>index.php/relatorios/clientesRapid" target="_blank"><i class="fas fa-users"></i> <small>Todas as Viaturas</small></a></li>
                 </ul>
             </div>
         </div>

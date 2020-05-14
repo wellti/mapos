@@ -9,7 +9,7 @@
             </div>
             <div class="widget-content">
                 <ul class="site-stats">
-                    <li><a target="_blank" href="<?php echo base_url() ?>index.php/relatorios/produtosRapid"><i class="fas fa-shopping-bag"></i> <small>Todos os Produtos</small></a></li>
+                    <li><a target="_blank" href="<?php echo base_url() ?>index.php/relatorios/produtosRapid"><i class="fas fa-shopping-bag"></i> <small>Todos as Peças e Acessórios</small></a></li>
                     <li><a target="_blank" href="<?php echo base_url() ?>index.php/relatorios/produtosRapidMin"><i class="fas fa-shopping-bag"></i> <small>Com Estoque Mínimo</small></a></li>
                 </ul>
             </div>
@@ -27,7 +27,7 @@
                 <div class="span12 well">
                     <div class="span12 alert alert-info">Deixe em branco caso não deseje utilizar o parâmetro.</div>
                     <form target="_blank" action="<?php echo base_url() ?>index.php/relatorios/produtosCustom" method="get">
-                        <div class="span12 well">
+<!--                         <div class="span12 well">
                             <div class="span6">
                                 <label for="">Preço de Venda de:</label>
                                 <input type="text" name="precoInicial" class="span12 money" />
@@ -36,7 +36,7 @@
                                 <label for="">até:</label>
                                 <input type="text" name="precoFinal" class="span12 money" />
                             </div>
-                        </div>
+                        </div> -->
                         <div class="span12 well" style="margin-left: 0">
                             <div class="span6">
                                 <label for="">Estoque de:</label>
