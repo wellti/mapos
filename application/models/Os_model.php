@@ -199,7 +199,7 @@ class Os_model extends CI_Model
         $query = $this->db->get('clientes');
         if ($query->num_rows() > 0) {
             foreach ($query->result_array() as $row) {
-                $row_set[] = ['label' => $row['nomeCliente'] . ' | Telefone: ' . $row['rua'], 'id' => $row['idClientes']];
+                $row_set[] = ['label' => $row['nomeCliente'] . ' | Setor: ' . $row['rua'], 'id' => $row['idClientes']];
             }
             echo json_encode($row_set);
         }
@@ -214,7 +214,7 @@ class Os_model extends CI_Model
         $query = $this->db->get('usuarios');
         if ($query->num_rows() > 0) {
             foreach ($query->result_array() as $row) {
-                $row_set[] = ['label' => $row['nome'] . ' | Telefone: ' . $row['telefone'], 'id' => $row['idUsuarios']];
+                $row_set[] = ['label' => $row['nome'] . ' | Ramal: ' . $row['telefone'], 'id' => $row['idUsuarios']];
             }
             echo json_encode($row_set);
         }
@@ -242,7 +242,7 @@ class Os_model extends CI_Model
         $query = $this->db->get('servicos');
         if ($query->num_rows() > 0) {
             foreach ($query->result_array() as $row) {
-                $row_set[] = ['label' => $row['nome'] . ' | Preço: R$ ' . $row['preco'], 'id' => $row['idServicos'], 'preco' => $row['preco']];
+                $row_set[] = ['label' => $row['nome'] . '' . $row[''], 'id' => $row['idServicos'], ];
             }
             echo json_encode($row_set);
         }

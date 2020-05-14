@@ -14,11 +14,12 @@
         <table class="table table-bordered ">
             <thead>
                 <tr>
-                    <th>Cod.</th>
-                    <th>Renavan</th>
+<!--                     <th>Cod.</th>
+                    <th>Renavan</th> -->
                     <th>Viatura</th>
+                    <th>Tipo</th>
                     <th>Setor</th>
-<!--                     <th>Email</th> -->
+                    <th>Placa</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -32,11 +33,12 @@
                     }
                     foreach ($results as $r) {
                         echo '<tr>';
-                        echo '<td>' . $r->idClientes . '</td>';
-                        echo '<td>' . $r->documento . '</td>';
+                        // echo '<td>' . $r->idClientes . '</td>';
+                        // echo '<td>' . $r->documento . '</td>';
                         echo '<td>' . $r->nomeCliente . '</td>';
+                        echo '<td>' . $r->numero . '</td>';
+                        echo '<td>' . $r->contato . '</td>';
                         echo '<td>' . $r->rua . '</td>';
-                        // echo '<td>' . $r->email . '</td>';
                         echo '<td>';
                         if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) {
                             echo '<a href="' . base_url() . 'index.php/clientes/visualizar/' . $r->idClientes . '" style="margin-right: 1%" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';

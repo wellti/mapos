@@ -61,11 +61,18 @@
                             <input id="cep" type="text" name="cep" value="<?php echo $result->cep; ?>" />
                         </div>
                     </div> -->
-                    <div class="control-group" class="control-label">
-                        <label for="rua" class="control-label">Setor<span class="required">*</span></label>
+                     <div class="control-group">
+                        <label for="numero" class="control-label">Tipo<span></span></label>
                         <div class="controls">
-                            <input id="rua" type="text" name="rua" value="<?php echo $result->rua; ?>" />
+                            <input id="numero" type="text" name="numero" value="<?php echo set_value('numero'); ?>" />
                         </div>
+                    </div>
+                    <div class="control-group" class="control-label">
+                        <label for="rua" class="control-label">Setor<span></span></label>
+                        <div class="controls">
+                            <input id="rua" type="text" name="rua" value="<?php echo set_value('rua'); ?>" />
+                        </div>
+                    </div>
 <!--                     </div>
                     <div class="control-group">
                         <label for="numero" class="control-label">Número<span class="required">*</span></label>
