@@ -18,8 +18,8 @@
                     <th>Renavan</th> -->
                     <th>Viatura</th>
                     <th>Tipo</th>
-                    <th>Setor</th>
                     <th>Placa</th>
+                    <th>Setor</th>
                     <th>Ações</th>
                 </tr>
             </thead>
