@@ -27,7 +27,7 @@ class Clientes extends MY_Controller
     public function gerenciar()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para visualizar clientes.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para visualizar Viaturas.');
             redirect(base_url());
         }
         $this->load->library('pagination');
@@ -46,7 +46,7 @@ class Clientes extends MY_Controller
     public function adicionar()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'aCliente')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para adicionar clientes.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para adicionar Viaturas.');
             redirect(base_url());
         }
 
@@ -94,7 +94,7 @@ class Clientes extends MY_Controller
         }
 
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'eCliente')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para editar clientes.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para editar Viaturas.');
             redirect(base_url());
         }
 
@@ -142,7 +142,7 @@ class Clientes extends MY_Controller
         }
 
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para visualizar clientes.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para visualizar Viaturas.');
             redirect(base_url());
         }
 
@@ -156,13 +156,13 @@ class Clientes extends MY_Controller
     public function excluir()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'dCliente')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para excluir clientes.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para excluir Viaturas.');
             redirect(base_url());
         }
 
         $id = $this->input->post('id');
         if ($id == null) {
-            $this->session->set_flashdata('error', 'Erro ao tentar excluir cliente.');
+            $this->session->set_flashdata('error', 'Erro ao tentar excluir Viatura.');
             redirect(site_url('clientes/gerenciar/'));
         }
 
@@ -180,7 +180,7 @@ class Clientes extends MY_Controller
         $this->clientes_model->delete('clientes', 'idClientes', $id);
         log_info('Removeu um cliente. ID' . $id);
 
-        $this->session->set_flashdata('success', 'Cliente excluido com sucesso!');
+        $this->session->set_flashdata('success', 'Viatura excluido com sucesso!');
         redirect(site_url('clientes/gerenciar/'));
     }
 }
