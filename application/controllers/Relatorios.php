@@ -30,7 +30,7 @@ class Relatorios extends MY_Controller
     public function clientes()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'rCliente')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de clientes.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de viaturas.');
             redirect(base_url());
         }
         $this->data['view'] = 'relatorios/rel_clientes';
@@ -40,7 +40,7 @@ class Relatorios extends MY_Controller
     public function produtos()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'rProduto')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de produtos.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de peças e peças e acessórios.');
             redirect(base_url());
         }
         $this->data['view'] = 'relatorios/rel_produtos';
@@ -50,7 +50,7 @@ class Relatorios extends MY_Controller
     public function clientesCustom()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'rCliente')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de clientes.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de viaturas.');
             redirect(base_url());
         }
 
@@ -62,7 +62,7 @@ class Relatorios extends MY_Controller
 
         $data['clientes'] = $this->Relatorios_model->clientesCustom($dataInicial, $dataFinal);
         $data['emitente'] = $this->Mapos_model->getEmitente();
-        $data['title'] = 'Relatório de Clientes Custumizado';
+        $data['title'] = 'Relatório de Viaturas Custumizado';
         $data['topo'] = $this->load->view('relatorios/imprimir/imprimirTopo', $data, true);
 
         $this->load->helper('mpdf');
@@ -74,13 +74,13 @@ class Relatorios extends MY_Controller
     public function clientesRapid()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'rCliente')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de clientes.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de viaturas.');
             redirect(base_url());
         }
 
         $data['clientes'] = $this->Relatorios_model->clientesRapid();
         $data['emitente'] = $this->Mapos_model->getEmitente();
-        $data['title'] = 'Relatório de Clientes';
+        $data['title'] = 'Relatório de Viaturas';
         $data['topo'] = $this->load->view('relatorios/imprimir/imprimirTopo', $data, true);
 
         $this->load->helper('mpdf');
@@ -92,13 +92,13 @@ class Relatorios extends MY_Controller
     public function produtosRapid()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'rProduto')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de produtos.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de peças e acessórios.');
             redirect(base_url());
         }
 
         $data['produtos'] = $this->Relatorios_model->produtosRapid();
         $data['emitente'] = $this->Mapos_model->getEmitente();
-        $data['title'] = 'Relatório de Produtos';
+        $data['title'] = 'Relatório de Peças e Acessórios';
         $data['topo'] = $this->load->view('relatorios/imprimir/imprimirTopo', $data, true);
 
         $this->load->helper('mpdf');
@@ -109,7 +109,7 @@ class Relatorios extends MY_Controller
     public function produtosRapidMin()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'rProduto')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de produtos.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de Peças e Acessórios.');
             redirect(base_url());
         }
 
@@ -126,7 +126,7 @@ class Relatorios extends MY_Controller
     public function produtosCustom()
     {
         if (!$this->permission->checkPermission($this->session->userdata('permissao'), 'rProduto')) {
-            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de produtos.');
+            $this->session->set_flashdata('error', 'Você não tem permissão para gerar relatórios de Peças e Acessórios.');
             redirect(base_url());
         }
 

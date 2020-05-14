@@ -31,10 +31,12 @@
                             <thead>
                                 <tr>
                                     <th style="font-size: 1.2em; padding: 5px;">Viatura</th>
-                                    <th style="font-size: 1.2em; padding: 5px;">Renavan</th>
                                     <th style="font-size: 1.2em; padding: 5px;">Placa</th>
+                                    <th style="font-size: 1.2em; padding: 5px;">Setor</th>
+                                    <th style="font-size: 1.2em; padding: 5px;">Tipo</th>
+<!--                                     <th style="font-size: 1.2em; padding: 5px;">Setor</th> -->
 <!--                                     <th style="font-size: 1.2em; padding: 5px;">Email</th> -->
-                                    <th style="font-size: 1.2em; padding: 5px;">Cadastro</th>
+<!--                                     <th style="font-size: 1.2em; padding: 5px;">Cadastro</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,17 +47,17 @@
                                         <?= $c->nomeCliente ?>
                                     </td>
                                     <td>
-                                        <?= $c->documento ?>
+                                        <?= $c->contato ?>
                                     </td>
                                     <td>
                                         <?= $c->rua ?>
                                     </td>
-<!--                                     <td>
-                                        <?= $c->email ?>
-                                    </td> -->
                                     <td>
-                                        <?= $dataCadastro ?>
+                                        <?= $c->numero ?>
                                     </td>
+<!--                                     <td>
+                                        <?= $numero ?>
+                                    </td> -->
                                 </tr>
                                 <?php endforeach ?>
                             </tbody>
