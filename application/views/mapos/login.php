@@ -52,7 +52,7 @@
     <div id="notification" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 id="myModalLabel">MapOS</h4>
+            <h4 id="myModalLabel">WS TRANSPORTE</h4>
         </div>
         <div class="modal-body">
             <h5 style="text-align: center" id="message">Os dados de acesso estão incorretos, por favor tente novamente!</h5>

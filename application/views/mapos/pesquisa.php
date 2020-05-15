@@ -17,7 +17,7 @@
                     <span class="icon">
                         <i class="fas fa-shopping-bag"></i>
                     </span>
-                    <h5>Produtos</h5>
+                    <h5>Peças e Acessórios</h5>
                 </div>
                 <div class="widget-content nopadding">
                     <table class="table table-bordered ">
@@ -25,7 +25,7 @@
                             <tr style="backgroud-color: #2D335B">
                                 <th>#</th>
                                 <th>Nome</th>
-                                <th>Preço</th>
+<!--                                 <th>Preço</th> -->
                                 <th></th>
                             </tr>
                         </thead>
@@ -38,7 +38,7 @@
                                 echo '<tr>';
                                 echo '<td>' . $r->idProdutos . '</td>';
                                 echo '<td>' . $r->descricao . '</td>';
-                                echo '<td>' . $r->precoVenda . '</td>';
+                                // echo '<td>' . $r->precoVenda . '</td>';
                                 echo '<td>';
                                 if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vProduto')) {
                                     echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/produtos/visualizar/' . $r->idProdutos . '" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
@@ -63,7 +63,7 @@
                     <span class="icon">
                         <i class="fas fa-user"></i>
                     </span>
-                    <h5>Clientes</h5>
+                    <h5>Viaturas</h5>
                 </div>
                 <div class="widget-content nopadding">
                     <table class="table table-bordered ">
@@ -71,7 +71,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Nome</th>
-                                <th>CPF/CNPJ</th>
+                                <th>Placa</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -84,7 +84,7 @@
                                 echo '<tr>';
                                 echo '<td>' . $r->idClientes . '</td>';
                                 echo '<td>' . $r->nomeCliente . '</td>';
-                                echo '<td>' . $r->documento . '</td>';
+                                echo '<td>' . $r->contato . '</td>';
                                 echo '<td>';
                                 if ($this->permission->checkPermission($this->session->userdata('permissao'), 'vCliente')) {
                                     echo '<a style="margin-right: 1%" href="' . base_url() . 'index.php/clientes/visualizar/' . $r->idClientes . '" class="btn tip-top" title="Ver mais detalhes"><i class="fas fa-eye"></i></a>';
@@ -119,7 +119,7 @@
                         <tr style="backgroud-color: #2D335B">
                             <th>#</th>
                             <th>Nome</th>
-                            <th>Preço</th>
+<!--                             <th>Preço</th> -->
                             <th></th>
                         </tr>
                     </thead>
@@ -132,7 +132,7 @@
                             echo '<tr>';
                             echo '<td>' . $r->idServicos . '</td>';
                             echo '<td>' . $r->nome . '</td>';
-                            echo '<td>' . $r->preco . '</td>';
+                            // echo '<td>' . $r->preco . '</td>';
                             echo '<td>';
                             if ($this->permission->checkPermission($this->session->userdata('permissao'), 'eServico')) {
                                 echo '<a href="' . base_url() . 'index.php/servicos/editar/' . $r->idServicos . '" class="btn btn-info tip-top" title="Editar Serviço"><i class="fas fa-edit"></i></a>';
