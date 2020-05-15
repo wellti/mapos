@@ -114,12 +114,12 @@ $config = [
         [
             'field' => 'rg',
             'label' => 'RG',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'cpf',
             'label' => 'CPF',
-            'rules' => 'required|trim|verific_cpf_cnpj|is_unique[usuarios.cpf]',
+            'rules' => 'trim|verific_cpf_cnpj|is_unique[usuarios.cpf]',
             'errors' => [
                 'verific_cpf_cnpj' => "O campo %s não é um CPF válido."
             ],
@@ -127,32 +127,32 @@ $config = [
         [
             'field' => 'rua',
             'label' => 'Rua',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'numero',
             'label' => 'Numero',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'bairro',
             'label' => 'Bairro',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'cidade',
             'label' => 'Cidade',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'estado',
             'label' => 'Estado',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'cep',
             'label' => 'CEP',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'email',
@@ -167,7 +167,7 @@ $config = [
         [
             'field' => 'telefone',
             'label' => 'Telefone',
-            'rules' => 'required|trim',
+            'rules' => 'trim',
         ],
         [
             'field' => 'situacao',

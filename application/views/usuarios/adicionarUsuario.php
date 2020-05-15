@@ -9,7 +9,7 @@
                 <span class="icon">
                     <i class="fas fa-user"></i>
                 </span>
-                <h5>Cadastro de Usuário</h5>
+                <h5>Cadastro de Usuário do Sistema</h5>
             </div>
             <div class="widget-content nopadding">
                 <?php if ($custom_error != '') {
@@ -23,21 +23,21 @@
                         </div>
                     </div>
 
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="rg" class="control-label">RG<span class="required">*</span></label>
                         <div class="controls">
                             <input id="rg" type="text" name="rg" value="<?php echo set_value('rg'); ?>" />
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="cpf" class="control-label">CPF<span class="required">*</span></label>
                         <div class="controls">
                             <input class="cpfUser" type="text" name="cpf" value="<?php echo set_value('cpf'); ?>" />
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="telefone" class="control-label">Telefone<span class="required">*</span></label>
                         <div class="controls">
                             <input id="telefone" type="text" name="telefone" value="<?php echo set_value('telefone'); ?>" />
@@ -49,7 +49,7 @@
                         <div class="controls">
                             <input id="celular" type="text" name="celular" value="<?php echo set_value('celular'); ?>" />
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <div class="control-group">
@@ -66,14 +66,14 @@
                         </div>
                     </div>
 
-                    <div class="control-group" class="control-label">
+<!--                     <div class="control-group" class="control-label">
                         <label for="cep" class="control-label">CEP<span class="required">*</span></label>
                         <div class="controls">
                             <input id="cep" type="text" name="cep" value="<?php echo set_value('cep'); ?>" />
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="rua" class="control-label">Rua<span class="required">*</span></label>
                         <div class="controls">
                             <input id="rua" type="text" name="rua" value="<?php echo set_value('rua'); ?>" />
@@ -106,7 +106,7 @@
                         <div class="controls">
                             <input id="estado" type="text" name="estado" value="<?php echo set_value('estado'); ?>" />
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <!-- Campo para inserir a data de validade de acesso do usuário-->
@@ -168,10 +168,10 @@
                     required: true
                 },
                 cpf: {
-                    required: true
+                    required: false
                 },
                 telefone: {
-                    required: true
+                    required: false
                 },
                 email: {
                     required: true
@@ -180,22 +180,22 @@
                     required: true
                 },
                 rua: {
-                    required: true
+                    required: false
                 },
                 numero: {
-                    required: true
+                    required: false
                 },
                 bairro: {
-                    required: true
+                    required: false
                 },
                 cidade: {
-                    required: true
+                    required: false
                 },
                 estado: {
-                    required: true
+                    required: false
                 },
                 cep: {
-                    required: true
+                    required: false
                 }
             },
             messages: {

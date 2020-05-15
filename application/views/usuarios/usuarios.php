@@ -5,7 +5,7 @@
         <span class="icon">
             <i class="fas fa-user"></i>
         </span>
-        <h5>Usuários</h5>
+        <h5>Usuários do Sistema</h5>
 
     </div>
     <div class="widget-content nopadding">
@@ -14,8 +14,8 @@
                 <tr style="backgroud-color: #2D335B">
                     <th>#</th>
                     <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Telefone</th>
+                    <th>Codigo</th>
+                    <th>Ramal</th>
                     <th>Nível</th>
                     <th>Validade</th>
                     <th>Ações</th>
