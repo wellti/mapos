@@ -24,7 +24,7 @@
                         </div>
                     </div>
 
-                    <div class="control-group">
+<!--                     <div class="control-group">
                         <label for="rg" class="control-label">RG<span class="required">*</span></label>
                         <div class="controls">
                             <input id="rg" type="text" name="rg" value="<?php echo $result->rg; ?>" />
@@ -50,7 +50,7 @@
                             <input id="celular" type="text" name="celular" value="<?php echo $result->celular; ?>" />
                         </div>
                     </div>
-
+ -->
                     <div class="control-group">
                         <label for="email" class="control-label">Email<span class="required">*</span></label>
                         <div class="controls">
@@ -66,7 +66,7 @@
                         </div>
                     </div>
 
-                    <div class="control-group" class="control-label">
+ <!--                    <div class="control-group" class="control-label">
                         <label for="cep" class="control-label">CEP<span class="required">*</span></label>
                         <div class="controls">
                             <input id="cep" type="text" name="cep" value="<?php echo $result->cep; ?>" />
@@ -106,7 +106,7 @@
                         <div class="controls">
                             <input id="estado" type="text" name="estado" value="<?php echo $result->estado; ?>" />
                         </div>
-                    </div>
+                    </div> -->
 
                     <!--DATA-->
                     <div class="control-group">
@@ -183,31 +183,31 @@
                     required: true
                 },
                 cpf: {
-                    required: true
+                    required: false
                 },
                 telefone: {
-                    required: true
+                    required: false
                 },
                 email: {
                     required: true
                 },
                 rua: {
-                    required: true
+                    required: false
                 },
                 numero: {
-                    required: true
+                    required: false
                 },
                 bairro: {
-                    required: true
+                    required: false
                 },
                 cidade: {
-                    required: true
+                    required: false
                 },
                 estado: {
-                    required: true
+                    required: false
                 },
                 cep: {
-                    required: true
+                    required: false
                 }
             },
             messages: {

@@ -99,16 +99,16 @@ class Usuarios extends MY_Controller
         $this->load->library('form_validation');
         $this->data['custom_error'] = '';
         $this->form_validation->set_rules('nome', 'Nome', 'trim|required');
-        $this->form_validation->set_rules('rg', 'RG', 'trim|required');
-        $this->form_validation->set_rules('cpf', 'CPF', 'trim|required');
-        $this->form_validation->set_rules('cep', 'CEP', 'trim|required');
-        $this->form_validation->set_rules('rua', 'Rua', 'trim|required');
-        $this->form_validation->set_rules('numero', 'Número', 'trim|required');
-        $this->form_validation->set_rules('bairro', 'Bairro', 'trim|required');
-        $this->form_validation->set_rules('cidade', 'Cidade', 'trim|required');
-        $this->form_validation->set_rules('estado', 'Estado', 'trim|required');
+        $this->form_validation->set_rules('rg', 'RG', 'trim');
+        $this->form_validation->set_rules('cpf', 'CPF', 'trim');
+        $this->form_validation->set_rules('cep', 'CEP', 'trim');
+        $this->form_validation->set_rules('rua', 'Rua', 'trim');
+        $this->form_validation->set_rules('numero', 'Número', 'trim');
+        $this->form_validation->set_rules('bairro', 'Bairro', 'trim');
+        $this->form_validation->set_rules('cidade', 'Cidade', 'trim');
+        $this->form_validation->set_rules('estado', 'Estado', 'trim');
         $this->form_validation->set_rules('email', 'Email', 'trim|required');
-        $this->form_validation->set_rules('telefone', 'Telefone', 'trim|required');
+        $this->form_validation->set_rules('telefone', 'Telefone', 'trim');
         $this->form_validation->set_rules('situacao', 'Situação', 'trim|required');
         $this->form_validation->set_rules('permissoes_id', 'Permissão', 'trim|required');
 
