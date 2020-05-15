@@ -91,14 +91,31 @@
                                             <input id="dataFinal" autocomplete="off" class="span12 datepicker" type="text" name="dataFinal" value="<?php echo date('d/m/Y', strtotime($result->dataFinal)); ?>" />
                                         </div>
                                         <div class="span3">
-                                            <label for="garantia">Garantia (dias)</label>
-                                            <input id="garantia" type="number" min="0" max="9999" class="span12" name="garantia" value="<?php echo $result->garantia ?>" />
-                                            <?php echo form_error('garantia'); ?>
-                                            <label for="termoGarantia">Termo Garantia</label>
-                                            <input id="termoGarantia" class="span12" type="text" name="termoGarantia" value="<?php echo $result->refGarantia ?>" />
-                                            <input id="garantias_id" class="span12" type="hidden" name="garantias_id" value="<?php echo $result->garantias_id ?>" />
+                                            <label for="mecanico">Mecânico Técnico</label>
+                                            <select class="span12" name="mecanico" style="text-transform:uppercase" id="mecanico">
+                                                <option <?php if ($result->status == 'John') {
+    echo 'selected';
+} ?> value="John">John</option>
+                                                <option <?php if ($result->status == 'Terceirizado') {
+    echo 'selected';
+} ?> value="Terceirizado">Terceirizado</option>
+                                                <option <?php if ($result->status == 'Aguardando Mecânico') {
+    echo 'selected';
+} ?> value="Aguardando Mecânico">Aguardando Mecânico</option>
+                                            </select>
                                         </div>
                                     </div>
+                                     <div class="span12" style="padding: 1%; margin-left: 0">
+                                        <div class="span6">
+                                            <label for="garantia">Garantia (dias)</label>
+                                            <input id="garantia" type="number" min="0" max="9999" class="span6" name="garantia" value="" />
+                                            <?php echo form_error('garantia'); ?>
+                                            <label for="termoGarantia">Termo Garantia</label>
+                                            <input id="termoGarantia" class="span6" type="text" name="termoGarantia" value="" />
+                                            <input id="garantias_id" class="span6" type="hidden" name="garantias_id" value="" />
+                                        </div>
+                                        </div>
+
                                     <div class="span6" style="padding: 1%; margin-left: 0">
                                         <label for="descricaoProduto">
                                             <h4>Descrição Peça e Acessórios/Serviços</h4>

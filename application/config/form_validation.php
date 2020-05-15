@@ -215,6 +215,11 @@ $config = [
             'rules' => 'required|trim',
         ],
         [
+            'field' => 'mecanico',
+            'label' => 'Mecanico',
+            'rules' => 'trim',
+        ],        
+        [
             'field' => 'observacoes',
             'label' => 'Observacoes',
             'rules' => 'trim',

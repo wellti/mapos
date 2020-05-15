@@ -4,7 +4,7 @@ $totalProdutos = 0; ?>
 <html lang="pt-br">
 
 <head>
-    <title>Map OS</title>
+    <title>WS TRANSPORTE</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" />
@@ -46,18 +46,16 @@ $totalProdutos = 0; ?>
 
 
                         <table class="table table-condensend">
-                            <tbody>
+                        <tbody>
                                 <tr>
                                     <td style="width: 50%; padding-left: 0">
                                         <ul>
                                             <li>
                                                 <span>
-                                                    <h5><b>CLIENTE</b></h5>
-                                                    <span><?php echo $result->nomeCliente ?></span><br />
-                                                    <span><?php echo $result->rua ?>, <?php echo $result->numero ?>, <?php echo $result->bairro ?></span>,
-                                                    <span><?php echo $result->cidade ?> - <?php echo $result->estado ?></span><br>
-                                                    <span>E-mail: <?php echo $result->email ?></span><br>
-                                                    <span>Celular: <?php echo $result->celular_cliente ?></span>
+                                                    <h5><b>DETALHES DA VIARURA</b></h5>
+                                                    <span>Viatura: <?php echo $result->nomeCliente ?></span><br />
+                                                    <span>Placa: <?php echo $result->contato ?></span>,<br />
+                                                    <span>Setor: <?php echo $result->rua?></span>,<br />
                                             </li>
                                         </ul>
                                     </td>
@@ -68,13 +66,13 @@ $totalProdutos = 0; ?>
                                                     <h5><b>RESPONSÁVEL</b></h5>
                                                 </span>
                                                 <span><?php echo $result->nome ?></span> <br />
-                                                <span>Telefone: <?php echo $result->telefone_usuario ?></span><br />
                                                 <span>Email: <?php echo $result->email_responsavel ?></span>
                                             </li>
                                         </ul>
                                     </td>
                                 </tr>
                             </tbody>
+                        </table>
                         </table>
 
                     </div>
@@ -154,7 +152,7 @@ $totalProdutos = 0; ?>
                             </tbody>
                         </table>
 
-                        <?php if ($produtos != null) { ?>
+<!--                         <?php if ($produtos != null) { ?>
                             <br />
                             <table class="table table-bordered table-condensed" id="tblProdutos">
                                 <thead>
@@ -185,11 +183,11 @@ $totalProdutos = 0; ?>
                                         <td><strong>R$ <?php echo number_format($totalProdutos, 2, ',', '.'); ?></strong></td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
                         <?php } ?>
 
                         <?php if ($servicos != null) { ?>
-                            <table class="table table-bordered table-condensed">
+<!--                             <table class="table table-bordered table-condensed">
                                 <thead>
                                     <tr>
                                         <th>Serviço</th>
@@ -218,14 +216,14 @@ $totalProdutos = 0; ?>
                                         <td><strong>R$ <?php echo number_format($totalServico, 2, ',', '.'); ?></strong></td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
                         <?php } ?>
-                        <?php
+  <!--                       <?php
                         if ($totalProdutos != 0 || $totalServico != 0) {
                             echo "<h4 style='text-align: right'>Valor Total: R$" . number_format($totalProdutos + $totalServico, 2, ',', '.') . "</h4>";
                         }
 
-                        ?>
+                        ?> -->
 
                         <table class="table table-bordered table-condensed">
                             <tbody>
@@ -233,10 +231,10 @@ $totalProdutos = 0; ?>
                                     <td>Data
                                         <hr>
                                     </td>
-                                    <td>Assinatura do Cliente
+                                    <td>Assinatura do Mecânico Técnico 
                                         <hr>
                                     </td>
-                                    <td>Assinatura do Técnico Responsável
+                                    <td>Assinatura do Supervisor de Transportes
                                         <hr>
                                  </td>
                                 </tr>

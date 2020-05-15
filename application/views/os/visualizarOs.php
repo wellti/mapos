@@ -52,9 +52,9 @@ $totalProdutos = 0; ?>
                                         <ul>
                                             <li>
                                                 <span>
-                                                    <h5><b>VIATURA</b></h5>
-                                                    <span><?php echo $result->nomeCliente ?></span><br />
-                                                    <span>Renavan: <?php echo $result->documento ?></span>,<br />
+                                                    <h5><b>DETALHES DA VIARURA</b></h5>
+                                                    <span>Viatura: <?php echo $result->nomeCliente ?></span><br />
+                                                    <span>Placa: <?php echo $result->contato ?></span>,<br />
                                                     <span>Setor: <?php echo $result->rua?></span>,<br />
                                             </li>
                                         </ul>
@@ -66,7 +66,6 @@ $totalProdutos = 0; ?>
                                                     <h5><b>RESPONSÁVEL</b></h5>
                                                 </span>
                                                 <span><?php echo $result->nome ?></span> <br />
-                                                <span>Contato: <?php echo $result->telefone_usuario ?></span><br />
                                                 <span>Email: <?php echo $result->email_responsavel ?></span>
                                             </li>
                                         </ul>
