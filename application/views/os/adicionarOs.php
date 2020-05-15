@@ -56,9 +56,9 @@
                                         <div class="span3">
                                             <label for="status">Status<span class="required">*</span></label>
                                             <select class="span12" name="status" id="status" value="">
-                                                <option value="Orçamento">Orçamento</option>
                                                 <option value="Aberto">Aberto</option>
                                                 <option value="Em Andamento">Em Andamento</option>
+                                                <option value="Orçamento">Orçamento</option>
                                                 <option value="Finalizado">Finalizado</option>
                                                 <option value="Cancelado">Cancelado</option>
                                                 <option value="Aguardando Peças">Aguardando Peças</option>
