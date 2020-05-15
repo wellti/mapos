@@ -4,12 +4,13 @@
 /**
  * App current version
  */
-$config['app_version'] = '4.7.5';
+$config['app_version'] = '1.0';
+// $config['app_version'] = '4.7.5';
 
 /**
  * Nome do sistema
  */
-$config['app_name'] = 'Map-OS';
+$config['app_name'] = 'WS TRANSPORTES';
 
 /**
  * Descrição do sistema
